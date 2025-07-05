@@ -12,6 +12,8 @@
         <maven.compiler.target>17</maven.compiler.target>
         <minecraft.version>1.21.7</minecraft.version>
         <fabric.api.version>0.128.2+1.21.7</fabric.api.version>
+        <fabric.loader.version>0.15.0</fabric.loader.version>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
     <repositories>
         <repository>
@@ -22,24 +24,65 @@
             <id>mojang</id>
             <url>https://libraries.minecraft.net/</url>
         </repository>
+        <repository>
+            <id>spongepowered</id>
+            <url>https://repo.spongepowered.org/maven</url>
+        </repository>
     </repositories>
     <dependencies>
-        <dependency>
-            <groupId>net.fabricmc</groupId>
-            <artifactId>fabric-loader</artifactId>
-            <version>0.15.10</version>
-            <scope>provided</scope>
-        </dependency>
-        <dependency>
-            <groupId>net.fabricmc.fabric-api</groupId>
-            <artifactId>fabric-api</artifactId>
-            <version>${fabric.api.version}</version>
-            <scope>provided</scope>
-        </dependency>
+        <!-- Minecraft -->
         <dependency>
             <groupId>com.mojang</groupId>
             <artifactId>minecraft</artifactId>
             <version>${minecraft.version}</version>
+            <scope>provided</scope>
+        </dependency>
+        
+        <!-- Fabric API -->
+        <dependency>
+            <groupId>net.fabricmc</groupId>
+            <artifactId>fabric-api</artifactId>
+            <version>${fabric.api.version}</version>
+            <scope>provided</scope>
+        </dependency>
+        
+        <!-- Fabric Loader -->
+        <dependency>
+            <groupId>net.fabricmc</groupId>
+            <artifactId>fabric-loader</artifactId>
+            <version>${fabric.loader.version}</version>
+            <scope>provided</scope>
+        </dependency>
+        
+        <!-- Mixin -->
+        <dependency>
+            <groupId>org.spongepowered</groupId>
+            <artifactId>mixin</artifactId>
+            <version>0.8.5</version>
+            <scope>provided</scope>
+        </dependency>
+        
+        <!-- MixinExtras -->
+        <dependency>
+            <groupId>com.llamalad7.mixinextras</groupId>
+            <artifactId>mixinextras</artifactId>
+            <version>0.3.5</version>
+            <scope>provided</scope>
+        </dependency>
+        
+        <!-- Lombok -->
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <version>1.18.30</version>
+            <scope>provided</scope>
+        </dependency>
+        
+        <!-- ModMenu API -->
+        <dependency>
+            <groupId>com.terraformersmc</groupId>
+            <artifactId>modmenu</artifactId>
+            <version>9.0.0-pre.1</version>
             <scope>provided</scope>
         </dependency>
     </dependencies>
@@ -48,11 +91,39 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
-                <version>3.10.1</version>
+                <version>3.11.0</version>
                 <configuration>
-                    <source>${maven.compiler.source}</source>
-                    <target>${maven.compiler.target}</target>
+                    <source>17</source>
+                    <target>17</target>
+                    <annotationProcessorPaths>
+                        <path>
+                            <groupId>org.projectlombok</groupId>
+                            <artifactId>lombok</artifactId>
+                            <version>1.18.30</version>
+                        </path>
+                    </annotationProcessorPaths>
                 </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-shade-plugin</artifactId>
+                <version>3.5.0</version>
+                <executions>
+                    <execution>
+                        <phase>package</phase>
+                        <goals>
+                            <goal>shade</goal>
+                        </goals>
+                        <configuration>
+                            <relocations>
+                                <relocation>
+                                    <pattern>dev.tr7zw.exordium</pattern>
+                                    <shadedPattern>dev.tr7zw.exordium</shadedPattern>
+                                </relocation>
+                            </relocations>
+                        </configuration>
+                    </execution>
+                </executions>
             </plugin>
         </plugins>
     </build>

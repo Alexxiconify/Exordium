@@ -7,7 +7,7 @@ import net.minecraft.resources.ResourceLocation;
 
 public class ExperienceComponent implements BufferComponent<Void> {
 
-    @Getter
+    
     private static final ResourceLocation id = new ResourceLocation("minecraft", "experience_bar");
     private static final Minecraft minecraft = Minecraft.getInstance();
 

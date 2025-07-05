@@ -1,12 +1,11 @@
 package dev.tr7zw.exordium.components.support;
 
 import dev.tr7zw.exordium.components.BufferComponent;
-import lombok.Getter;
 import net.minecraft.resources.ResourceLocation;
 
 public class PaperDollComponent implements BufferComponent<Void> {
 
-    @Getter
+    
     private static final ResourceLocation id = new ResourceLocation("tr7zw", "paperdoll");
 
     @Override

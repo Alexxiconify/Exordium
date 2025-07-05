@@ -20,7 +20,7 @@ public class Config {
     public ComponentSettings xaerosMinimapSettings = new ComponentSettings(true, 30, true);
     public ComponentSettings paperdollSettings = new ComponentSettings(true, 30);
 
-    @Getter
+    
     @Setter
     public static class ComponentSettings {
         private boolean enabled = true;

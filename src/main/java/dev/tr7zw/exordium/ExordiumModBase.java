@@ -28,18 +28,18 @@ public abstract class ExordiumModBase {
 
     public static final Logger LOGGER = LogManager.getLogger("Exordium");
     public static ExordiumModBase instance;
-    @Getter
+    
     private static boolean forceBlend;
 
     public Config config;
     private final File settingsFile = new File("config", "exordium.json");
     private final Gson gson = new GsonBuilder().setPrettyPrinting().create();
     @Setter
-    @Getter
+    
     private RenderTarget temporaryScreenOverwrite = null;
-    @Getter
+    
     private final DelayedRenderCallManager delayedRenderCallManager = new DelayedRenderCallManager();
-    @Getter
+    
     private final CustomShaderManager customShaderManager = new CustomShaderManager();
     private final BufferManager bufferManager = new BufferManager();
     private boolean lateInit = true;

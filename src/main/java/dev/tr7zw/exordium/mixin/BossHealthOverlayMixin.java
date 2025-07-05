@@ -17,7 +17,7 @@ public class BossHealthOverlayMixin implements BossOverlayAccess {
 
     @Shadow
     @Final
-    @Getter
+    
     private Map<UUID, LerpingBossEvent> events;
 
 }

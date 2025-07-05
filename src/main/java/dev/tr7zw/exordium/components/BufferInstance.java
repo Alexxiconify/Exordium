@@ -15,7 +15,7 @@ import net.minecraft.resources.ResourceLocation;
 
 public final class BufferInstance<T> {
 
-    @Getter
+    
     private final ResourceLocation id;
     private final BufferComponent<T> component;
     private final BufferedComponent buffer;

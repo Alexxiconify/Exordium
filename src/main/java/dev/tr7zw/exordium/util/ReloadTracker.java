@@ -8,7 +8,7 @@ import lombok.experimental.UtilityClass;
  */
 @UtilityClass
 public class ReloadTracker {
-    @Getter
+    
     private static int reloadCount = 0;
 
     public static void reload() {

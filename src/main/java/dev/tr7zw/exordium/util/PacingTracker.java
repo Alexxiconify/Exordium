@@ -5,7 +5,7 @@ import lombok.Setter;
 
 public class PacingTracker {
 
-    @Getter
+    
     @Setter
     private long cooldown = 0;
 

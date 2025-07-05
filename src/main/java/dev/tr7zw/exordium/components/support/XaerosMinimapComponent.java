@@ -6,7 +6,7 @@ import net.minecraft.resources.ResourceLocation;
 
 public class XaerosMinimapComponent implements BufferComponent<Void> {
 
-    @Getter
+    
     private static final ResourceLocation id = new ResourceLocation("xaero", "minimap");
 
     @Override

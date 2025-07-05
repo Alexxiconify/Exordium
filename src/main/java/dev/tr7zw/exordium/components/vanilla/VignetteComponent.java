@@ -9,7 +9,7 @@ import net.minecraft.world.level.border.WorldBorder;
 public class VignetteComponent implements BufferComponent<Float> {
 
     private static final Minecraft MINECRAFT = Minecraft.getInstance();
-    @Getter
+    
     private static final ResourceLocation id = new ResourceLocation("minecraft", "vignette");
 
     private float exordium_state = 0f;
