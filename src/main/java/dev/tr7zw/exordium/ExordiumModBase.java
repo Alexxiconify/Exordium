@@ -20,7 +20,6 @@ import dev.tr7zw.exordium.util.CustomShaderManager;
 import dev.tr7zw.exordium.util.DelayedRenderCallManager;
 import dev.tr7zw.exordium.versionless.config.Config;
 import dev.tr7zw.exordium.versionless.config.ConfigUpgrader;
-import lombok.Getter;
 import lombok.Setter;
 import net.minecraft.client.gui.screens.Screen;
 
@@ -28,18 +27,18 @@ public abstract class ExordiumModBase {
 
     public static final Logger LOGGER = LogManager.getLogger("Exordium");
     public static ExordiumModBase instance;
-    
+
     private static boolean forceBlend;
 
     public Config config;
     private final File settingsFile = new File("config", "exordium.json");
     private final Gson gson = new GsonBuilder().setPrettyPrinting().create();
     @Setter
-    
+
     private RenderTarget temporaryScreenOverwrite = null;
-    
+
     private final DelayedRenderCallManager delayedRenderCallManager = new DelayedRenderCallManager();
-    
+
     private final CustomShaderManager customShaderManager = new CustomShaderManager();
     private final BufferManager bufferManager = new BufferManager();
     private boolean lateInit = true;
