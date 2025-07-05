@@ -18,16 +18,16 @@ import net.minecraft.network.chat.Component;
 public class PlayerTabOverlayMixin implements TablistAccess {
 
     @Shadow
-    
+
     private Gui gui;
     @Shadow
-    
+
     private Map<UUID, PlayerTabOverlay.HealthState> healthStates;
     @Shadow
-    
+
     private Component header;
     @Shadow
-    
+
     private Component footer;
 
     @Shadow

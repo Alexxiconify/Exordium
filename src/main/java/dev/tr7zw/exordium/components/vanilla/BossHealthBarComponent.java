@@ -9,7 +9,6 @@ import net.minecraft.resources.ResourceLocation;
 
 public class BossHealthBarComponent implements BufferComponent<BossOverlayAccess> {
 
-    
     private static final ResourceLocation id = new ResourceLocation("minecraft", "boss_bar");
     private int amount = 0;
 

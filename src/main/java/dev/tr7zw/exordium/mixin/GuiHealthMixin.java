@@ -27,16 +27,16 @@ public class GuiHealthMixin implements HealthAccess {
     @Shadow
     private Minecraft minecraft;
     @Shadow
-    
+
     private long healthBlinkTime;
     @Shadow
-    
+
     private int lastHealth;
     @Shadow
-    
+
     private int displayHealth;
     @Shadow
-    
+
     private int tickCount;
 
     private boolean renderingMountHealth = false;

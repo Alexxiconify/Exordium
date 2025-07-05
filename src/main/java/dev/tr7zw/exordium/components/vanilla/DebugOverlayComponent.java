@@ -6,7 +6,6 @@ import net.minecraft.resources.ResourceLocation;
 
 public class DebugOverlayComponent implements BufferComponent<Void> {
 
-    
     private static final ResourceLocation id = new ResourceLocation("minecraft", "debug_text");
 
     @Override

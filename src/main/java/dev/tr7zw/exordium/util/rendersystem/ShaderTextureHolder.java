@@ -1,6 +1,7 @@
 package dev.tr7zw.exordium.util.rendersystem;
 
 import com.mojang.blaze3d.systems.RenderSystem;
+
 public class ShaderTextureHolder implements StateHolder {
 
     private boolean fetched = false;

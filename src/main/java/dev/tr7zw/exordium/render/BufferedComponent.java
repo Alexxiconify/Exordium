@@ -19,7 +19,7 @@ import net.minecraft.client.Minecraft;
 public class BufferedComponent {
 
     private static final Minecraft MINECRAFT = Minecraft.getInstance();
-    
+
     private static Model model = null;
     private final Supplier<Config.ComponentSettings> settings;
     //#if MC >= 12102

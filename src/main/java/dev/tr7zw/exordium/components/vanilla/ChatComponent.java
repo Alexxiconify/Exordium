@@ -8,7 +8,6 @@ import net.minecraft.resources.ResourceLocation;
 
 public class ChatComponent implements BufferComponent<ChatAccess> {
 
-    
     private static final ResourceLocation id = new ResourceLocation("minecraft", "chat_panel");
 
     private int lastScrollbarPos = 0;

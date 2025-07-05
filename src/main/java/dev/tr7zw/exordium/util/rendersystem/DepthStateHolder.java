@@ -12,17 +12,13 @@ public class DepthStateHolder implements StateHolder {
 
     public void fetch() {
         fetched = true;
-        // TODO: Restore GlStateManager calls after build system is configured
-        // func = GlStateManager.DEPTH.func;
-        // mask = GlStateManager.DEPTH.mask;
+        // TODO: Use RenderSystem for depth state if needed
     }
 
     public void apply() {
         if (!fetched)
             return;
-        // TODO: Restore GlStateManager calls after build system is configured
-        // GlStateManager._depthFunc(func);
-        // GlStateManager._depthMask(mask);
+        // TODO: Use RenderSystem for depth state if needed
     }
 
 }

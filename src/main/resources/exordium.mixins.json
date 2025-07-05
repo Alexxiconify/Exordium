@@ -12,7 +12,7 @@
         "ChatComponentMixin",
         "CrosshairMixin",
         "GameRendererMixin",
-        "GlStateManagerMixin",
+        "RenderSystemMixin",
         "GuiDebugOverlayMixin",
         "GuiExperienceMixin",
         "GuiHealthMixin",

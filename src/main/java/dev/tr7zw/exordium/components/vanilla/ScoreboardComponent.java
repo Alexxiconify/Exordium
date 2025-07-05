@@ -14,7 +14,6 @@ public class ScoreboardComponent implements BufferComponent<Void> {
     private static final Minecraft minecraft = Minecraft.getInstance();
     private static final ResourceLocation id = new ResourceLocation("minecraft", "scoreboard");
 
-    
     private String scoreboardState = null;
 
     @Override

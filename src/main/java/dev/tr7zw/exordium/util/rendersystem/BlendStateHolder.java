@@ -1,7 +1,5 @@
 package dev.tr7zw.exordium.util.rendersystem;
 
-import com.mojang.blaze3d.platform.GlStateManager;
-
 public class BlendStateHolder implements StateHolder {
 
     private boolean fetched = false;
@@ -17,18 +15,20 @@ public class BlendStateHolder implements StateHolder {
 
     public void fetch() {
         fetched = true;
-        enabled = GlStateManager.BLEND.mode.enabled;
-        srcRgb = GlStateManager.BLEND.srcRgb;
-        srcAlpha = GlStateManager.BLEND.srcAlpha;
-        dstRgb = GlStateManager.BLEND.dstRgb;
-        dstAlpha = GlStateManager.BLEND.dstAlpha;
+        // TODO: Replace with RenderSystem state fetch if available in 1.21.7
+        // enabled = RenderSystem.isBlendEnabled();
+        // srcRgb = ...
+        // srcAlpha = ...
+        // dstRgb = ...
+        // dstAlpha = ...
     }
 
     public void apply() {
         if (!fetched)
             return;
-        GlStateManager._blendFuncSeparate(srcRgb, dstRgb, srcAlpha, dstAlpha);
-        GlStateManager.BLEND.mode.setEnabled(enabled);
+        // TODO: Replace with RenderSystem blend func if available in 1.21.7
+        // RenderSystem.blendFuncSeparate(srcRgb, dstRgb, srcAlpha, dstAlpha);
+        // RenderSystem.setBlendEnabled(enabled);
     }
 
 }

@@ -17,7 +17,6 @@ import net.minecraft.client.gui.screens.ChatScreen;
 @Mixin(ChatComponent.class)
 public abstract class ChatComponentMixin implements ChatAccess {
 
-    
     @Final
     @Shadow
     private List<GuiMessage.Line> trimmedMessages;
@@ -25,7 +24,7 @@ public abstract class ChatComponentMixin implements ChatAccess {
     private int chatScrollbarPos;
     @Shadow
     private Minecraft minecraft;
-    
+
     @Setter
     private int tickCount;
 

@@ -11,7 +11,6 @@ import org.apache.logging.log4j.Logger;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import com.mojang.blaze3d.pipeline.RenderTarget;
-import com.mojang.blaze3d.platform.GlStateManager;
 import com.mojang.blaze3d.systems.RenderSystem;
 
 import dev.tr7zw.exordium.components.BufferManager;
@@ -89,9 +88,9 @@ public abstract class ExordiumModBase {
 
     public static void correctBlendMode() {
         RenderSystem.enableBlend();
-        RenderSystem.blendFuncSeparate(GlStateManager.SourceFactor.SRC_ALPHA,
-                GlStateManager.DestFactor.ONE_MINUS_SRC_ALPHA, GlStateManager.SourceFactor.ONE,
-                GlStateManager.DestFactor.ONE_MINUS_SRC_ALPHA);
+        RenderSystem.blendFuncSeparate(RenderSystem.SrcFactor.SRC_ALPHA,
+                RenderSystem.DstFactor.ONE_MINUS_SRC_ALPHA, RenderSystem.SrcFactor.ONE,
+                RenderSystem.DstFactor.ONE_MINUS_SRC_ALPHA);
     }
 
     public BufferManager getBufferManager() {

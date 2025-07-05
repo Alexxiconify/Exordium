@@ -31,8 +31,10 @@ public class VignetteMixin {
     @Final
     private Minecraft minecraft;
 
-    private static ResourceLocation FAST_VIGNETTE_LOCATION = new ResourceLocation("exordium", "textures/misc/fast_vignette.png");
-    private static ResourceLocation FAST_VIGNETTE_DARK_LOCATION = new ResourceLocation("exordium", "textures/misc/fast_vignette_dark.png");
+    private static ResourceLocation FAST_VIGNETTE_LOCATION = new ResourceLocation("exordium",
+            "textures/misc/fast_vignette.png");
+    private static ResourceLocation FAST_VIGNETTE_DARK_LOCATION = new ResourceLocation("exordium",
+            "textures/misc/fast_vignette_dark.png");
 
     //#if MC >= 12005
     @WrapOperation(method = "renderCameraOverlays", at = {

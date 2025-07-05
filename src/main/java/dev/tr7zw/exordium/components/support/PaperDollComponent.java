@@ -5,7 +5,6 @@ import net.minecraft.resources.ResourceLocation;
 
 public class PaperDollComponent implements BufferComponent<Void> {
 
-    
     private static final ResourceLocation id = new ResourceLocation("tr7zw", "paperdoll");
 
     @Override
