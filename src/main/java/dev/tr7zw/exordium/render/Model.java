@@ -10,7 +10,7 @@ import com.mojang.blaze3d.vertex.Tesselator;
 import com.mojang.blaze3d.vertex.VertexBuffer;
 import com.mojang.blaze3d.vertex.VertexFormat.Mode;
 
-import net.minecraft.client.renderer.CompiledShaderProgram;
+// import net.minecraft.client.renderer.CompiledShaderProgram;
 
 //#if MC >= 12100
 import com.mojang.blaze3d.vertex.MeshData;
@@ -53,7 +53,7 @@ public class Model {
         //#endif
     }
 
-    public void drawWithShader(Matrix4f matrix4f, Matrix4f matrix4f2, CompiledShaderProgram shaderInstance) {
+    public void drawWithShader(Matrix4f matrix4f, Matrix4f matrix4f2, Object shaderInstance) {
         toDraw.bind();
         toDraw.drawWithShader(matrix4f, matrix4f2, shaderInstance);
     }
