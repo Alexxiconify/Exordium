@@ -1,6 +1,6 @@
-# Exordium
+<img src="https://raw.githubusercontent.com/tr7zw/Exordium/1.19/Shared/src/main/resources/assets/exordium/icon.png" align="right" width=200>
 
-![Exordium icon](https://raw.githubusercontent.com/tr7zw/Exordium/1.19/Shared/src/main/resources/assets/exordium/icon.png)
+# Exordium
 
 __Render the HUD and screens at a lower framerate to speed up what's really important: the worldrendering.__
 
