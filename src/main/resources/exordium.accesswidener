@@ -1,8 +1,8 @@
 accessWidener	v1	named
-accessible field com/mojang/blaze3d/platform/GlStateManager BLEND Lcom/mojang/blaze3d/platform/GlStateManager$BlendState;
-accessible field com/mojang/blaze3d/platform/GlStateManager DEPTH Lcom/mojang/blaze3d/platform/GlStateManager$DepthState;
-accessible class com/mojang/blaze3d/platform/GlStateManager$BlendState
-accessible class com/mojang/blaze3d/platform/GlStateManager$DepthState
+accessible field com/mojang/blaze3d/platform/RenderSystem BLEND Lcom/mojang/blaze3d/platform/RenderSystem$BlendState;
+accessible field com/mojang/blaze3d/platform/RenderSystem DEPTH Lcom/mojang/blaze3d/platform/RenderSystem$DepthState;
+accessible class com/mojang/blaze3d/platform/RenderSystem$BlendState
+accessible class com/mojang/blaze3d/platform/RenderSystem$DepthState
 accessible class net/minecraft/client/gui/components/PlayerTabOverlay$HealthState
-accessible class com/mojang/blaze3d/platform/GlStateManager$BooleanState
-accessible field com/mojang/blaze3d/platform/GlStateManager$BooleanState enabled Z
+accessible class com/mojang/blaze3d/platform/RenderSystem$BooleanState
+accessible field com/mojang/blaze3d/platform/RenderSystem$BooleanState enabled Z
